@@ -1,16 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Editor from './components/Editor/index';
-import Preview from './components/Preview/index';
+import App from './components/App';
 import './style.css';
 
 
 ReactDOM.render(
   <div>
-    <Editor />
-    <Preview />
+    <App />
   </div>,
   document.getElementById('root')
 );
-
-
