@@ -1,25 +1,13 @@
 import React from 'react';
+import marked from 'marked';
 
-// const Preview = (props) => {
-//   return (
-//     <div id="preview">
-//       <p>{this.props.input}</p>
-//     </div>
-//   )
-// };
-
-class Preview extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    return (
-      <div id="preview">
-        <p>{this.props.input}</p>
-      </div>
-    );
-  }
+const Preview = (props) => {
+  return (
+    <div 
+      id='preview'
+      dangerouslySetInnerHTML={{__html: marked(props.input)}}> 
+    </div>
+  );
 }
 
 export default Preview;
