@@ -2,10 +2,10 @@ import React from 'react';
 
 const Editor = (props) => {
   return (
-      <textarea 
+      <textarea
+        id='editor' 
         value={props.input} 
-        onChange={props.handleInput}
-        id="editor" />
+        onChange={props.onChange} />
   );
 }
 
