@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Editor from './Editor/index';
 import Preview from './Preview/index';
-import '../../style.css';
+import '../../stylesheets/components/_all.scss'
 
 class App extends Component {
   constructor(props) {
@@ -30,51 +30,35 @@ class App extends Component {
 
 
 const placeholder = 
-`# Welcome to my React Markdown Previewer!
+`# Header
+## Sub Header
+[I am a link](https://laurasilvey.github.io/FCC-personal-portfolio/)
 
-## This is a sub-heading...
-### And here's some other cool stuff:
-  
-Here's some code, \`<div></div>\`, between 2 backticks.
+Here is some inline code \`<div></div>\`
 
 \`\`\`
-// this is multi-line code:
+  // and here is some multi-line code
 
-function anotherExample(firstLine, lastLine) {
-  if (firstLine == '\`\`\`' && lastLine == '\`\`\`') {
-    return multiLineCode;
-  }
-}
+  function example(num) {
+    return num;
+  } 
 \`\`\`
-  
-You can also make text **bold**... whoa!
-Or _italic_.
-Or... wait for it... **_both!_**
-And feel free to go crazy ~~crossing stuff out~~.
 
-There's also [links](https://www.freecodecamp.com), and
-> Block Quotes!
+1. This is a list
+1. You can use whatever number you want 
+1. The list will count on like normal
+- You can even use dashes
+* Or an asterisk if you'd like
 
-And if you want to get really crazy, even tables:  
+> Use a greater than symbol 
+> when you need a block quote
 
-Wild Header | Crazy Header | Another Header?
---- | --- | ---
-Your content can | be here, and it | can be here....
-And here. | Okay. | I think we get it.  
+To make some text bold try using two **asterisks**
 
-- And of course there are lists.
-  - Some are bulleted.
-     - With different indentation levels.
-        - That look like this.
-
-
-1. And there are numbererd lists too.
-1. Use just 1s if you want! 
-1. But the list goes on...
-- Even if you use dashes or asterisks.
-* And last but not least, let's not forget embedded images:
+This app was made with:
 
 ![React Logo w/ Text](https://goo.gl/Umyytc)
+
 `
 
 export default App;
