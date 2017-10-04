@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
-import Editor from './Editor/index';
-import Preview from './Preview/index';
-import '../../stylesheets/components/_all.scss'
+import React, { Component } from 'react'
+import Editor from './Editor/index'
+import Preview from './Preview/index'
+import Footer from './Footer/index'
+import '../../stylesheets/main.scss'
 
 class App extends Component {
   constructor(props) {
@@ -20,9 +21,23 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <Editor input={this.state.editorValue} onChange={this.handleChange} />
-        <Preview input={this.state.editorValue} />
+      <div className='wrapper'>
+        <header>
+          <h1 className='title'>Markdown Previewer</h1>
+        </header>
+        <main className='main'>
+          <section className='container'>
+            <h1 className='title'>Editor</h1>
+            <Editor input={this.state.editorValue} onChange={this.handleChange} />
+          </section>
+          <section className='container'>
+            <h1 className='title'>Preview</h1>
+            <Preview input={this.state.editorValue} />
+          </section>
+        </main>
+        <footer>
+          <Footer />
+        </footer>
       </div>
     )
   }    

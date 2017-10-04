@@ -1,9 +1,11 @@
-import React from 'react';
-import marked from 'marked';
+import React from 'react'
+import marked from 'marked'
+
 
 const Preview = (props) => {
   return (
-    <div 
+    <div
+      className='preview' 
       id='preview'
       dangerouslySetInnerHTML={{__html: marked(props.input)}} /> 
   );
