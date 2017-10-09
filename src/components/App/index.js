@@ -22,19 +22,22 @@ class App extends Component {
   render() {
     return (
       <div className='wrapper'>
-        <header>
-          <h1 className='title'>Markdown Previewer</h1>
-        </header>
-        <main className='main'>
-          <section className='container'>
-            <h1 className='title'>Editor</h1>
-            <Editor input={this.state.editorValue} onChange={this.handleChange} />
-          </section>
-          <section className='container'>
-            <h1 className='title'>Preview</h1>
-            <Preview input={this.state.editorValue} />
-          </section>
-        </main>
+        
+        <div className='page'>
+          <header>
+            <h1 className='title'>Markdown Previewer</h1>
+          </header>
+          <main className='main'>
+            <section className='container'>
+              <h1 className='title editor-title'>Editor</h1>
+              <Editor input={this.state.editorValue} onChange={this.handleChange} />
+            </section>
+            <section className='container'>
+              <h1 className='title'>Preview</h1>
+              <Preview input={this.state.editorValue} />
+            </section>
+          </main>
+        </div>
         <footer>
           <Footer />
         </footer>
